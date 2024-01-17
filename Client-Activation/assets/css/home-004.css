@@ -1,0 +1,366 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, rgba(1, 122, 126, 0.8), rgba(2, 48, 49, 0.8)), url("../../public/img/Uptown Bonifacio 3.jpeg");
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+}
+
+.logo{
+      filter: brightness(0) invert(1);
+      width: 20%;
+}
+
+.container {
+    display: flex;
+    min-width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    margin: 5px 10px;
+    box-sizing: border-box;
+}
+
+.inputs{
+    margin-top: 20px;
+}
+
+.inputs input{
+    opacity: 0.5;
+    border-radius: 50px;
+}
+
+.header{
+    color: var(--text_color);
+    text-shadow: -2px 2px lightgray;
+}
+
+.inputs{
+    width: 60%;
+}
+
+form label{
+    color: var(--white);
+}
+
+.activate-btn{
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--background_color);
+    border: none;
+}
+
+.cellphone{
+    width: 60%;
+    z-index: 1;
+}
+
+.glow {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+        0 0 140px 60px #fff,
+        0 0 160px 90px #0ff,
+        0 0 200px 140px #0ff;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: var(--white);
+    line-height: 2px;
+}
+
+footer a {
+    color: var(--background_color);
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px){
+    .logo {
+        width: 50%;
+    }
+
+    .left{
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    form{
+        margin-top: 30px;
+    }
+
+    .header{
+        text-align: center;
+    }
+
+    .header h2{
+        font-size: 32px;
+    }
+
+    .inputs {
+        width: 80%; /* Adjust the width as needed */
+        margin: 50px auto; /* Center the .inputs horizontally */
+    }
+
+    .inputs input {
+        width: 100%; /* Make the input width 100% to fill the container */
+    }
+
+    .inputs a{
+        text-decoration: none;
+    }
+
+    .activate-btn {
+        margin-top: 20px;
+        padding: 5px 35px;
+        font-size: 16px; /* Adjust the font size as needed */
+        display: block; /* Ensure the button takes up the full width */
+        margin: 20px auto;
+    }
+
+    .right{
+        display: none;
+    }
+
+    footer a{
+        font-size: 11px;
+    }
+    
+    footer p{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .left{
+        padding: 30px;
+        margin-left: 30px;
+        margin-right: 50px;
+    }   
+
+    .header h2{
+        font-size: 36px;
+    }
+
+    .inputs{
+        width: 50%;
+        margin-top: 120px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .inputs input{
+        font-size: 12px;
+    }
+
+    .inputs label{
+        font-size: 16px;
+    }
+
+    .activate-btn{
+        margin-top: 20px;
+        padding: 5px 50px;
+        font-size: 12px;
+    }
+
+    .phone {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+
+    .glow{
+        left: calc(45% - 20px);
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    @media (min-height: 1024px){
+        .logo {
+            width: 50%;
+        }
+    
+        .left{
+            padding: 10px;
+            margin: 0 auto;
+        }
+    
+        .header{
+            text-align: center;
+        }
+    
+        .header h2{
+            font-size: 51px;
+        }
+    
+        .inputs {
+            width: 70%; /* Adjust the width as needed */
+            margin: 100px auto; /* Center the .inputs horizontally */
+        }
+    
+        .inputs input {
+            width: 100%; /* Make the input width 100% to fill the container */
+            font-size: 18px;
+        }
+
+        .inputs label{
+            font-size: 25px;
+        }
+    
+        .inputs a{
+            text-decoration: none;
+        }
+    
+        .activate-btn {
+            margin-top: 20px;
+            padding: 5px 35px;
+            font-size: 25px; /* Adjust the font size as needed */
+            display: block; /* Ensure the button takes up the full width */
+            margin: 20px auto;
+        }
+    
+        .right{
+            display: none;
+        }
+    
+        footer a{
+            font-size: 14px;
+        }
+        
+        footer p{
+            font-size: 14px;
+        }
+    }
+}
+
+/* landscape mobile users */
+@media (orientation: landscape) and (hover: none) and (pointer: coarse){
+    footer{
+        margin-top: 50px;
+        position: relative;
+    }
+    
+    form{
+        margin-top: 30px;
+    }
+
+    .inputs {
+        width: 70%; /* Adjust the width as needed */
+        margin-top: 70px;
+    }
+
+    .cellphone{
+        width: 80%;
+    }
+
+    @media (min-width: 768px){
+        .header h2{
+            font-size: 32px;
+        }
+    }
+
+    @media (min-width: 1024px){
+        .header h2{
+            font-size: 40px;
+        }
+    
+        .inputs {
+            width: 70%; /* Adjust the width as needed */
+        }
+    
+        .inputs input {
+            width: 100%; /* Make the input width 100% to fill the container */
+            font-size: 16px;
+        }
+
+        .inputs label{
+            font-size: 20px;
+        }
+
+        .activate-btn {
+            font-size: 20px;
+        }
+
+        .cellphone{
+            width: 90%;
+        }
+
+        footer{
+            position: fixed;
+        }
+    }
+
+    @media (min-width: 1200px){
+        .logo{
+            width: 20%;
+        }
+
+        .left{
+            padding: 30px;
+            margin-left: 30px;
+            margin-right: 50px;
+        }   
+
+        .header h2{
+            font-size: 51px;
+        }
+
+        .header{
+            text-align: left;
+        }
+
+        .inputs{
+            margin: 100px 0;
+        }
+
+        .activate-btn{
+            margin: 30px 0;
+        }
+
+        .right{
+            display: block;
+        }
+    }
+}

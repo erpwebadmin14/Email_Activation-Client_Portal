@@ -1,0 +1,535 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --text_color: #0A1A44;
+  --background_color: #00C4CC;
+  --input_color: #D8E6ED;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, rgba(1, 122, 126, 0.8), rgba(2, 48, 49, 0.8)), url("../../public/img/Uptown Bonifacio 3.jpeg");
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px;
+}
+
+.logo {
+  filter: brightness(0) invert(1);
+  width: 20%;
+}
+
+.container {
+  display: flex;
+  min-width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  margin: 5px 10px;
+  box-sizing: border-box;
+}
+
+.inputs {
+  margin-top: 20px;
+  width: 60%;
+}
+
+.inputs input {
+  opacity: 0.5;
+  border-radius: 50px;
+}
+
+form i{
+    cursor: pointer;
+    z-index: 2;
+}
+
+form label,
+.form-check p,
+.btn {
+  color: var(--white);
+}
+
+.header {
+  color: var(--text_color);
+  text-shadow: -2px 2px lightgray;
+  font-size: 32px;
+}
+
+.subheader {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.activate-btn{
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--background_color);
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    cursor: pointer;
+}
+
+.btn-outline-secondary {
+    border: none;
+    background-color: white;
+    border-radius: 0 50px 50px 0;
+    opacity: 0.5;
+    color: #6c757d; /* Bootstrap's default button color */
+}
+
+.btn-outline-secondary i {
+    font-size: 1.2em;
+}
+
+.btn-outline-secondary:active ~ .btn-outline-secondary i{
+    display: none;
+}
+
+.form-check {
+  margin-top: 20px;
+}
+
+#row2 {
+  margin-top: 20px;
+  line-height: 5px;
+}
+
+.cellphone{
+    width: 60%;
+    z-index: 1;
+}
+
+.glow {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+        0 0 140px 60px #fff,
+        0 0 160px 90px #0ff,
+        0 0 200px 140px #0ff;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: var(--white);
+    line-height: 2px;
+}
+
+footer a {
+    color: var(--background_color);
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px){
+    .logo {
+        width: 50%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .left{
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .form-header{
+        text-align: center;
+    }
+
+    .header{
+        font-size: 32px;
+    }
+
+    .inputs {
+        width: 80%; /* Adjust the width as needed */
+        margin: 50px auto; /* Center the .inputs horizontally */
+    }
+
+    .inputs a{
+        text-decoration: none;
+    }
+
+    .form-check p {
+        font-size: 12px;
+    }
+
+    .activate-btn {
+        margin-top: 20px;
+        padding: 5px 35px;
+        font-size: 16px; /* Adjust the font size as needed */
+        display: block; /* Ensure the button takes up the full width */
+        margin: 20px auto;
+    }
+
+    footer{
+        position: relative;
+    }
+
+    footer a,
+    footer p{
+        font-size: 11px;
+    }
+
+    @media (min-height: 768px){
+        .header{
+            font-size: 28px;
+        }
+
+        footer{
+            position: fixed;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    body{
+        background-size: cover;
+    }
+
+    .left{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .header{
+        font-size: 36px;
+    }
+
+    .subheader{
+        font-size: 14px;
+    }
+
+    .inputs{
+        width: 50%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .inputs input{
+        font-size: 12px;
+    }
+
+    .inputs label{
+        font-size: 13px;
+    }
+  
+    .form-check p {
+        font-size: 10px;
+    }
+
+    .activate-btn{
+        margin-top: 20px;
+        padding: 5px 50px;
+        font-size: 12px;
+        display: block; /* Ensure the button takes up the full width */
+        margin: 20px auto;
+        cursor: pointer;
+    }
+
+    .inputs a{
+        text-decoration: none;
+    }
+
+    .phone {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+
+    .glow{
+        left: calc(45% - 20px);
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    @media (min-height: 1024px){
+        body{
+            background-size: initial;
+        }
+
+        .logo {
+            width: 50%;
+        }
+    
+        .right{
+            display: none;
+        }
+    
+        .left{
+            padding: 10px;
+            margin: 0 auto;
+        }
+    
+        .form-header{
+            text-align: center;
+        }
+    
+        .header{
+            font-size: 51px;
+        }
+
+        .subheader{
+            font-size: 23px;
+        }
+    
+        .inputs {
+            width: 80%; /* Adjust the width as needed */
+            margin: 50px auto; /* Center the .inputs horizontally */
+        }
+        
+        .inputs input{
+            font-size: 16px;
+        }
+
+        #row1 input{
+            margin-top: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #row2 input{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #row2{
+            margin-top: 40px;
+        }
+    
+        .inputs label{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    
+        .form-check p {
+            font-size: 16px;
+        }
+
+        footer a,
+        footer p{
+            font-size: 16px;
+        }
+    }
+
+    @media (min-height: 1200px){
+        .header{
+            font-size: 62px;
+        }
+
+        .subheader{
+            font-size: 23px;
+        }
+    
+        .inputs {
+            width: 80%; /* Adjust the width as needed */
+            margin: 50px auto; /* Center the .inputs horizontally */
+        }
+        
+        .inputs input{
+            font-size: 22px;
+        }
+
+        #row2{
+            margin-top: 60px;
+        }
+
+        .inputs label{
+            font-size: 28px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .form-check p {
+            font-size: 22px;
+        }
+
+        .activate-btn {
+            font-size: 32px; /* Adjust the font size as needed */
+        }
+
+        footer a,
+        footer p{
+            font-size: 20px;
+        }
+    }
+}
+
+
+/* landscape mobile users */
+@media (orientation: landscape) and (hover: none) and (pointer: coarse){
+    
+    footer{
+        position: relative;
+    }
+
+    .inputs{
+        width: 70%;
+    }
+
+    .cellphone{
+        margin-top: 100px;
+        width: 80%;
+        z-index: 1;
+    }
+
+    @media (max-width: 767px){
+        .logo{
+            width: 40%;
+        }
+    }
+
+    @media(min-width: 768px){
+        .logo{
+            width: 20%;
+        }
+
+        .header{
+            font-size: 32px;
+        }
+
+        .subheader{
+            font-size: 13px;
+        }
+
+        .inputs input{
+            font-size: 12px;
+        }
+
+        .inputs label{
+            font-size: 13px;
+        }
+
+        .form-check p{
+            font-size: 10px;
+        }
+
+        footer a,
+        footer p{
+            font-size: 10px;
+        }
+    }
+
+    @media (min-width: 1024px){
+        body{
+            background-size: initial;
+        }
+
+        .left{
+            margin-left: 30px;
+            margin-right: 50px;
+        }
+
+        .header{
+            font-size: 36px;
+        }
+
+        .subheader{
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .right{
+            display: block;
+        }
+
+        #row2 input{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #row2{
+            margin-top: 40px;
+        }
+
+        .form-header{
+            text-align: left;
+        }
+
+        .inputs{
+            margin: 0;
+        }
+
+        .activate-btn{
+            margin-top: 20px;
+            padding: 5px 50px;
+            font-size: 16px;
+            display: block; /* Ensure the button takes up the full width */
+            margin: 20px auto;
+        }
+
+        footer{
+            position: fixed;
+        }
+        
+        footer a,
+        footer p{
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 1200px){
+        .header{
+            font-size: 42px;
+        }
+
+        .subheader{
+            font-size: 20px;
+        }
+
+        .inputs {
+            width: 80%; /* Adjust the width as needed */
+        }
+    
+        .inputs label{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    
+        .inputs a{
+            text-decoration: none;
+        }
+    
+        .form-check p {
+            font-size: 16px;
+        }
+    }
+}

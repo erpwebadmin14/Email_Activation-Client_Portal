@@ -1,0 +1,589 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(10, 26, 68, 0.8), rgba(2, 48, 49, 0.8)), url("../../public/img/Eastwood_Web_Image.webp");
+    background-size: cover;
+    margin: auto;
+}
+
+header {
+    padding: 20px;
+}
+
+header h6 {
+    display: none;
+    border: 2px solid var(--white);
+    margin: 20px 20px 5px 0;
+    width: 50%;
+}
+
+.logo {
+    filter: brightness(0) invert(1);
+    width: 20%;
+}
+
+.container {
+    display: flex;
+    min-width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    margin: 5px 10px;
+    box-sizing: border-box;
+}
+
+.header h2 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.header span {
+    color: var(--background_color);
+}
+
+.header a {
+    color: var(--background_color);
+    text-decoration: none;
+}
+
+.header p {
+    color: var(--white);
+}
+
+.bottom-left {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-left .text{
+    flex-direction: column;
+}
+
+.bottom-left p{
+    line-height: 10px;
+}
+
+.bottom-left p:nth-child(1) {
+    color: var(--background_color);
+    font-weight: 600;
+}
+
+.button button{
+    background-color: var(--background_color);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    padding: 5px 20px;
+    font-weight: 600;
+}
+
+.cellphone {
+    transform: rotate(15deg);
+    width: 35%;
+    transform-origin: bottom right;
+}
+
+.glow{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+        0 0 140px 60px #fff,
+        0 0 160px 90px #0ff,
+        0 0 200px 140px #0ff;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: var(--white);
+    line-height: 2px;
+}
+
+footer a {
+    color: var(--background_color);
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+    .logo {
+        width: 50%;
+    }
+
+    header h6 {
+        display: block;
+    }
+
+    /* Mobile view styles */
+    .container {
+        flex-direction: column;
+    }
+
+    .header h2{
+        font-size: 30px;
+    }
+
+    .header p,
+    .bottom-left p{
+        font-size: 14px;
+    }
+
+    .left{
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .phone {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align items to the right */
+        margin-right: 20px;
+    }
+
+    .cellphone {
+        width: 35%; /* Adjust the width if needed */
+        margin-top: 30px;
+        margin-right: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .bottom-left{
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    .glow {
+        left: calc(75% - 20px);
+        z-index: 0; /* Set z-index to make sure .glow is behind .cellphone */
+        box-shadow: 
+            0 0 60px 30px #fff,
+            0 0 140px 60px #0ff,
+            0 0 160px 90px #0ff;
+    }
+
+    .button{
+        margin-left: 0;
+    }
+    
+    footer{
+        position: relative;
+        margin-top: 20px; /* Add some margin to separate from content */
+    }
+
+    footer a{
+        font-size: 11px;
+    }
+
+    footer p{
+        font-size: 11px;
+    }
+
+   @media (max-height: 400px){
+        .logo{
+            width: 30%;
+        }
+
+        .container{
+            flex-direction: row;
+        }
+
+        header h6{
+            display: none;
+        }
+
+        .left{
+            padding: 30px;
+            margin-left: 30px;
+            margin-right: 50px;
+        }
+
+        .bottom-left .button{
+            margin-top: 0;
+        }
+
+        .phone{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+        }
+
+        .cellphone{
+            margin-top: 50px;
+        }
+
+        .glow {
+            left: calc(50% - 20px);
+            z-index: 0; /* Set z-index to make sure .glow is behind .cellphone */
+        }
+   }
+
+   @media (max-height: 767px){
+        .right{
+            margin-bottom: 100px;
+        }
+   }
+}
+
+@media only screen and (min-width: 768px){
+    .left{
+        padding: 30px;
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+    
+    .header h2{
+        font-size: 32px;
+    }
+
+    .header p{
+        font-size: 14px;
+        margin-right: 150px;
+    }
+
+    .bottom-left{
+        margin-top: 50px;
+    }
+
+    .bottom-left p{
+        font-size: 15px;
+    }
+
+    .phone {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+
+    .cellphone {
+        width: 35%; /* Adjust the width if needed */
+        margin-top: 30px;
+        margin-right: 0; /* Remove margin-right to center horizontally */
+        position: relative;
+        z-index: 1;
+    }
+
+    .glow{
+        left: calc(25% - 20px);
+    }
+
+    .bottom-left .button{
+        margin-top: 12%;
+    }
+
+    footer a{
+        font-size: 12px;
+    }
+    
+    footer p{
+        font-size: 12px;
+    }
+
+    @media (min-height: 1024px){
+        .logo {
+            width: 50%;
+        }
+
+        .column{
+            margin: 5px 50px;
+        }
+
+        .left{
+            padding: 0;
+        }
+    
+        header h6 {
+            display: block;
+        }
+    
+        /* Mobile view styles */
+        .container {
+            flex-direction: column;
+        }
+
+        .right{
+            margin-bottom: 200px;
+        }
+    
+        .header h2{
+            font-size: 51px;
+        }
+    
+        .header p,
+        .bottom-left p{
+            font-size: 22px;
+        }
+    
+        .phone {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the right */
+        }
+    
+        .cellphone {
+            width: 35%; /* Adjust the width if needed */
+            margin-top: 30px;
+            margin-right: 80px;
+            position: relative;
+            z-index: 1;
+        }
+    
+        .bottom-left{
+            margin-top: 50px;
+            flex-direction: column;
+        }
+
+        .bottom-left .button{
+            margin-top: 0;
+        }
+    
+        .glow {
+            left: calc(75% - 20px);
+            z-index: 0; /* Set z-index to make sure .glow is behind .cellphone */
+        }
+
+        .button button{
+            font-size: 22px;
+        }
+    
+        .button{
+            margin-left: auto;
+        }
+        
+        footer{
+            position: relative;
+            margin-top: 20px; /* Add some margin to separate from content */
+        }
+
+        footer a,
+        footer p{
+            font-size: 14px;
+        }
+    }
+
+    @media (min-height: 1200px){
+        .cellphone{
+            width: 30%;
+        }
+
+        footer{
+            position: fixed;
+        }
+    }
+}
+
+/* landscape mobile users */
+@media (orientation: landscape) and (hover: none) and (pointer: coarse){
+    .header h2{
+        font-size: 28px;
+    }
+
+    .header p{
+        font-size: 12px;
+    }
+
+    .left{
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .cellphone{
+        margin-top: 50px;
+    }
+
+    .bottom-left{
+        flex-direction: row;
+    }
+
+    .bottom-left p{
+        font-size: 13px;
+    }
+
+    footer{
+        margin-top: 20px;
+        position: relative;
+    }
+
+    footer a,
+    footer p{
+        font-size: 11px;
+    }
+
+    @media (max-width: 767px){
+        .container{
+            flex-direction: column;
+        }
+
+        header h6{
+            width: 20%;
+            display: block;
+        }
+
+        .left{
+            padding: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .header h2{
+            font-size: 36px;
+        }
+
+        .header p{
+            font-size: 16px;
+            margin-right: 100px;
+        }
+
+        .bottom-left p{
+            font-size: 16px;
+        }
+
+        .bottom-left .button{
+            margin: auto;
+        }
+
+        .glow{
+            left: calc(70% - 20px);
+        }
+
+        .phone {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the right */
+        }
+
+        .cellphone{
+            width: 30%;
+            margin-right: 120px;
+        }
+    }
+
+    @media (min-width: 768px){
+        .bottom-left .button{
+            margin-top: 18%;
+        }
+
+        .button button{
+            font-weight: 500;
+        }
+
+        .phone{
+            /* align-items: center; Center items horizontally */
+        }
+
+        .glow{
+            box-shadow: 
+                0 0 60px 30px #fff,
+                0 0 140px 60px #0ff,
+                0 0 160px 90px #0ff;
+        }
+    }
+
+    @media (min-width: 1024px){
+        .logo{
+            width: 30%;
+        }
+
+        footer{
+            position: fixed;
+        }
+
+        .header h2{
+            font-size: 42px;
+        }
+
+        .header p{
+            font-size: 16px;
+            margin-right: 100px;
+        }
+
+        .cellphone{
+            margin-top: 80px;
+        }
+
+        .bottom-left p{
+            font-size: 17px;
+        }
+
+        footer a,
+        footer p{
+            font-size: 12px;
+        }
+    }
+
+    @media (min-width: 1200px){
+        header h6{
+            display: none;
+        }
+
+        .container{
+            flex-direction: row;
+        }
+
+        .header h2{
+            font-size: 46px;
+        }
+
+        .header p{
+            font-size: 22px;
+        }
+
+        .bottom-left p{
+            font-size: 23px;
+        }
+
+        .bottom-left .button{
+            margin-top: 12%;
+        }
+
+        footer a,
+        footer p{
+            font-size: 14px;
+        }
+
+        .button button{
+            font-size: 22px;
+        }
+
+        .cellphone{
+            width: 40%;
+        }
+    }
+}

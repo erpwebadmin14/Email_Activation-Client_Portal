@@ -1,0 +1,404 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+header{
+    padding: 20px;
+}
+
+.logo{
+    width: 20%;
+}
+
+.container {
+    display: flex;
+    min-width: 100%;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    margin: 5px 10px;
+    box-sizing: border-box;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns items horizontally */
+    justify-content: center; /* Center-aligns items vertically */
+}
+
+.otp-logo{
+    width: 40%;
+}
+
+.header{
+    text-align: center;
+}
+
+.header h2{
+    font-weight: 700;
+}
+
+#inputs {
+    justify-content: center; /* Center-aligns the input fields horizontally */
+    align-items: center; /* Aligns the input fields vertically */
+    margin-bottom: 20px; /* Adds some spacing between inputs and buttons */
+}
+
+.input { 
+    border: none; 
+    color: var(--black);
+    border: 3px var(--input_color); 
+    background-color: var(--input_color);
+    text-align: center;
+    /* cursor: not-allowed; 
+    pointer-events: none; */
+} 
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.input:focus { 
+    border: 3px solid var(--background_color); 
+    outline: none; 
+} 
+
+.input:nth-child(1) { 
+    cursor: pointer; 
+    pointer-events: all; 
+}
+
+.sub-btn a{
+    text-decoration: none;
+}
+
+.submit-btn {
+    width: 50%;
+    padding: 5px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--background_color);
+    border-radius: 50px;
+    margin: 10px auto; /* Add this line to center the button */
+    display: block;
+    border: none;
+}
+
+.resend-btn{
+    text-align: center;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px){
+    .logo{
+        width: 50%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .header p{
+        font-size: 12px;
+    }
+
+    .input { 
+        width: 45px; 
+        height: 45px; 
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .submit-btn{
+        font-size: 12px;
+    }
+
+    .resend-btn{
+        font-size: 12px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer p {
+        line-height: 2px;
+        font-size: 11px;
+    }
+
+    footer a {
+        color: var(--background_color);
+        text-decoration: none;
+        padding: 0 15px;
+        font-weight: 600;
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    body{
+        background-image: url("../../public/img/Uptown\ Bonifacio\ 2\(1).png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 50vw 100vh;
+    }
+
+    .header h2{
+        font-size: 27px;
+    }
+
+    .header p{
+        font-size: 14px;
+    }
+
+    .submit-btn{
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .resend-btn{
+        font-size: 14px;
+    }
+
+    .input { 
+        width: 40px; 
+        height: 40px; 
+        border-radius: 15px;
+        margin: auto 1px;
+    }
+
+    footer{
+        display: none;
+    }
+
+    @media (min-height: 1024px){
+        body{
+            background: none;
+        }
+
+        .logo{
+            width: 50%;
+        }
+    
+        .right{
+            display: none;
+        }
+
+        .header h2{
+            font-size: 51px;
+        }
+    
+        .header p{
+            font-size: 20px;
+        }
+    
+        .input { 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 10px;
+            margin: auto;
+        }
+    
+        .submit-btn{
+            font-size: 20px;
+        }
+    
+        .resend-btn{
+            font-size: 20px;
+        }
+    
+        footer {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        footer p {
+            line-height: 2px;
+            font-size: 16px;
+        }
+    
+        footer a {
+            color: var(--background_color);
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+    @media (min-height: 1200px){
+        .header h2{
+            font-size: 54px;
+        }
+    
+        .header p{
+            font-size: 23px;
+        }
+
+        .input{
+            width: 100px;
+            height: 100px;
+        }
+
+        .submit-btn{
+            font-size: 25px;
+        }
+    
+        .resend-btn{
+            font-size: 25px;
+        }
+
+        footer a,
+        footer p{
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .input{
+        width: 60px;
+        height: 60px;
+        margin: auto 5px;
+    }
+    
+    @media (min-height: 1200px){
+        .header h2{
+            font-size: 54px;
+        }
+    
+        .header p{
+            font-size: 23px;
+        }
+
+        .input{
+            width: 100px;
+            height: 100px;
+        }
+
+        .submit-btn{
+            font-size: 25px;
+        }
+    
+        .resend-btn{
+            font-size: 25px;
+        }
+
+        footer a,
+        footer p{
+            font-size: 20px;
+        }
+    }
+}
+
+/* landscape mobile users */
+@media (orientation: landscape) and (hover: none) and (pointer: coarse){
+    footer {
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer p {
+        line-height: 2px;
+        font-size: 11px;
+    }
+
+    footer a {
+        color: var(--background_color);
+        text-decoration: none;
+        padding: 0 15px;
+        font-weight: 600;
+        font-size: 11px;
+    }
+
+    body{
+        background: none;
+    }
+
+    .right{
+        display: none;
+    }
+
+    @media (min-width: 768px){
+        .logo{
+            width: 20%;
+        }
+
+        .input { 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 15px;
+            margin: auto 1px;
+        }
+    }
+
+    @media (min-width: 1024px){
+        body{
+            background-image: url("../../public/img/Uptown\ Bonifacio\ 2\(1).png");
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: 50vw 100vh;
+        }
+
+        .right{
+            display: block;
+        }
+
+        footer{
+            display: none
+        }
+    }
+
+    @media (min-width: 1200px){
+        .header h2{
+            font-size: 44px;
+        }
+    
+        .header p{
+            font-size: 18px;
+        }
+
+        .input { 
+            width: 80px; 
+            height: 80px; 
+        }
+
+        .submit-btn{
+            font-size: 20px;
+        }
+    
+        .resend-btn{
+            font-size: 20px;
+        }
+    }
+}
